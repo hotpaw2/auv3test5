@@ -1,0 +1,27 @@
+# Mac OS X
+.DS_Store
+UserInterface.xcuserstate
+
+# Automatic backup files
+*.swp
+*~.nib
+*~
+
+# XCode 3
+build/
+
+# Generated files
+*.[oa]
+*.pyc
+
+# XCode 4
+xcuserdata/
+*.xcuserdatad
+*.xcuserstate
+
+project.xcworkspace/
+*.xcworkspacedata
+
+## Obj-C/Swift specific
+*.hmap
+*.ipa
