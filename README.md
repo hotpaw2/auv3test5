@@ -7,4 +7,7 @@ The AudioUnit subclass internal uses only  C code to meet (Apple's current) audi
 There is one button to generate a tone,
 and one text field to display whether the microphone tap is live.
 
+Created by http://www.nicholson.com/rhn/
 Use under the BSD 2-clause license.  No warrantees implied.
+
+
