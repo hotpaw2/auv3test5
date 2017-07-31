@@ -12,16 +12,20 @@
 		C5C5BACB1F2F93D7003AE939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C5BAC91F2F93D7003AE939 /* Main.storyboard */; };
 		C5C5BACD1F2F93D7003AE939 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C5BACC1F2F93D7003AE939 /* Assets.xcassets */; };
 		C5C5BAD01F2F93D7003AE939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5C5BACE1F2F93D7003AE939 /* LaunchScreen.storyboard */; };
+		C5C5BADA1F2F94E2003AE939 /* MyV3AudioUnit5.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C5BAD91F2F94E2003AE939 /* MyV3AudioUnit5.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C5C5BAC21F2F93D7003AE939 /* auv3test5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = auv3test5.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5C5BAC51F2F93D7003AE939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5C5BAC71F2F93D7003AE939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C5C5BAC51F2F93D7003AE939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
+		C5C5BAC71F2F93D7003AE939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; tabWidth = 8; usesTabs = 0; };
 		C5C5BACA1F2F93D7003AE939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5C5BACC1F2F93D7003AE939 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C5BACF1F2F93D7003AE939 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5C5BAD11F2F93D7003AE939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5C5BAD71F2F94E1003AE939 /* auv3test5-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "auv3test5-Bridging-Header.h"; sourceTree = "<group>"; };
+		C5C5BAD81F2F94E2003AE939 /* MyV3AudioUnit5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyV3AudioUnit5.h; sourceTree = "<group>"; };
+		C5C5BAD91F2F94E2003AE939 /* MyV3AudioUnit5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyV3AudioUnit5.m; sourceTree = "<group>"; usesTabs = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,9 @@
 			children = (
 				C5C5BAC51F2F93D7003AE939 /* AppDelegate.swift */,
 				C5C5BAC71F2F93D7003AE939 /* ViewController.swift */,
+				C5C5BAD71F2F94E1003AE939 /* auv3test5-Bridging-Header.h */,
+				C5C5BAD81F2F94E2003AE939 /* MyV3AudioUnit5.h */,
+				C5C5BAD91F2F94E2003AE939 /* MyV3AudioUnit5.m */,
 				C5C5BAC91F2F93D7003AE939 /* Main.storyboard */,
 				C5C5BACC1F2F93D7003AE939 /* Assets.xcassets */,
 				C5C5BACE1F2F93D7003AE939 /* LaunchScreen.storyboard */,
@@ -97,6 +104,7 @@
 					C5C5BAC11F2F93D7003AE939 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 52F8P58G32;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5C5BAC81F2F93D7003AE939 /* ViewController.swift in Sources */,
+				C5C5BADA1F2F94E2003AE939 /* MyV3AudioUnit5.m in Sources */,
 				C5C5BAC61F2F93D7003AE939 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,11 +270,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 52F8P58G32;
 				INFOPLIST_FILE = auv3test5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hotpaw.auv3test5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.auv3test5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "auv3test5/auv3test5-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,11 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 52F8P58G32;
 				INFOPLIST_FILE = auv3test5/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hotpaw.auv3test5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sample.auv3test5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "auv3test5/auv3test5-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +316,7 @@
 				C5C5BAD61F2F93D7003AE939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
