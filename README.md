@@ -1,11 +1,10 @@
 # auv3test5
 ## ReadMe
 
-This is an iOS app to test using Swift to instantiate and run a custom AUAudioUnit V3 tone generator written in Objective C.
+This is an iOS audio test app using Swift 3 to instantiate and run an example custom V3 AUAudioUnit subclass
+which implements a simple tone generator.  The AUAudioUnit subclass is written in Objective C.  This allows the AUAudioUnit subclass code to use only the plain C subset of Objective C inside the audio thread context, which is done in order to meet Apple's (current) recommendations for real-time audio code.
 
-The AudioUnit subclass internals uses only plain C code to meet (Apple's current) audio real-time requirements.
-
-In the app UI, there is one button to generate a tone,
+In the test app UI, there is one button to generate a tone,
 and one text field to display whether the microphone tap is live.
 
 Created by http://www.nicholson.com/rhn/ - 
