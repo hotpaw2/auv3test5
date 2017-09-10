@@ -5,7 +5,7 @@ This is an iOS audio test app that instantiates and runs a custom V3 AUAudioUnit
 
 The AUAudioUnit subclass is written in Objective C.  This allows the AUAudioUnit subclass code to use only the plain C subset of Objective C inside the audio thread context, which is done in order to meet Apple's (current) recommendations for real-time audio code.  
 
-The rest of the test app is written in Swift 3.  The Audio Unit is connected to AVAudioEngine using in Swift 3.
+The rest of the test app is written in Swift 3.  The Audio Unit is connected to AVAudioEngine in Swift 3.
 
 In the test app UI, there is one button to generate a tone,
 and one text field to display whether the microphone tap is live.
