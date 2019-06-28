@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     func audioSetup() {
         
         let sess = AVAudioSession.sharedInstance()
-        try! sess.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        try! sess.setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.playAndRecord)))
         do {
             try sess.setPreferredSampleRate(48000.0)
             sampleRateHz	= 48000.0
@@ -96,9 +96,9 @@ class ViewController: UIViewController {
         
         let bus0 : AVAudioNodeBus   =  0    // output of the inputNode
         let inputNode   =  audioEngine!.inputNode
-        let inputFormat =  inputNode!.outputFormat(forBus: bus0)
+        let inputFormat =  inputNode.outputFormat(forBus: bus0)
         
-        inputNode?.installTap(onBus: bus0,
+        inputNode.installTap(onBus: bus0,
                               bufferSize: 512,
                               format: inputFormat ) {
                                 (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) -> Void in
@@ -129,14 +129,19 @@ class ViewController: UIViewController {
                                          selector: #selector(self.updateView) )
             displayTimer.preferredFramesPerSecond = 60  // 60 Hz
             displayTimer.add(to: RunLoop.current,
-                             forMode: RunLoopMode.commonModes )
+                             forMode: RunLoop.Mode.common )
         }
     }
     
     // show that something is happening
-    func updateView() {
+    @objc func updateView() {
         myInfoLabel1.text = String(testCounter) + "" + String(testMagnitude)
     }
 }
 
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
+	return input.rawValue
+}
