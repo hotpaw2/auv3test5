@@ -47,9 +47,10 @@ class ViewController: UIViewController {
     // audio unit subroutines
     
     func audioSetup() {
-        
+
         let sess = AVAudioSession.sharedInstance()
-        try! sess.setCategory(AVAudioSession.Category(rawValue: convertFromAVAudioSessionCategory(AVAudioSession.Category.playAndRecord)))
+        try! sess.setCategory(AVAudioSession.Category.playAndRecord)
+
         do {
             try sess.setPreferredSampleRate(48000.0)
             sampleRateHz	= 48000.0
@@ -137,11 +138,4 @@ class ViewController: UIViewController {
     @objc func updateView() {
         myInfoLabel1.text = String(testCounter) + "" + String(testMagnitude)
     }
-}
-
-
-
-// Helper function inserted by Swift 4.2 migrator.
-fileprivate func convertFromAVAudioSessionCategory(_ input: AVAudioSession.Category) -> String {
-	return input.rawValue
 }
